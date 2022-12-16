@@ -1,12 +1,16 @@
-import logo from '../../assets/img/logo_video365';
+import logo from '../../assets/img/logo_video365.png';
+import { TopMenu } from '../menu/TopMenu';
+import "./Header.css";
 
-export const Header = ()=>{
-    
-    return(
+export const Header = () => {
+
+    return (
         <div>
-            <img src={logo} alt="logo video365"/>
-            <h1>Bienvenido a Video365</h1>
-            <h2>Hecho por cinefilos para cinefilos</h2>
+            <div className="flex text-center">
+                <img className="logo" src={logo} alt="logo" />
+                <h1>Bienvenido</h1>
+            </div>
+            <TopMenu />
         </div>
     )
 }
