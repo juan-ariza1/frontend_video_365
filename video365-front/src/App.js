@@ -14,10 +14,11 @@ import { Sidebar } from "./components/sidebar/Sidebar";
 
 function App() {
   return (
+   
     <div className="App">
       <Router>
-        <Header />
-        <Sidebar />
+      <Header />
+      <Sidebar />
         <Routes>
           <Route path="/category/:name" element={<Category />} />
           <Route path="/movie/:id" element={<Movie />} />
@@ -26,11 +27,12 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+      <Footer />
       </Router>
     </div>
   );
 }
+
 
 export default App;
 
