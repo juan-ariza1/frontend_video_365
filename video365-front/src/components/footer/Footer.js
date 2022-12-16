@@ -1,7 +1,5 @@
 import "./Footer.css";
-
 import React from "react";
-
 
 class Footer extends React.Component {
     constructor(props) {
@@ -16,5 +14,3 @@ class Footer extends React.Component {
         );
     }
 }
-
-export default Footer;
