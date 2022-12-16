@@ -9,7 +9,7 @@ export const Card = ({id,name, description, image, staffList})=>{
     
     const oldCardRender = ()=> (
         <div className="card">
-            <Link className="btn" to={=`/movie/${id}`}>
+            <Link className="btn" to={`/movie/${id}`}>
                 <img src={image} alt="imagen no encontrada" />
                 <div className="container">
                     <h4>
