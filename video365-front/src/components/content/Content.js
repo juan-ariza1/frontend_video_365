@@ -12,15 +12,16 @@ export const Content = () => {
     }, []);
 
     const getMovies = () => {
-        fetch("http://localhost:8080/api/movie")
-        then((response) => response.json())
-        then((response) => {
+        fetch(API_URL + "movie")
+            .then((response) => response.json())
+            .then((response) => {
+                console.log(`2`, 2);
             setMovies(response);
         });
     };
 
     const getMoviesAsync = async () => {
-        let response =await fetch("http://localhost:8080/api/movie");
+        let response = await fetch(API_URL + "movie");
         response = await response.json();
         setMovies(response);
     };
@@ -31,7 +32,9 @@ export const Content = () => {
                 <Card 
                     key={idx}
                     name={movie.name}
-                    description={!movie.description?"No hay descripcion":movie.desciption}
+                    description={
+                        !movie.description ? "No hay descripcion" : movie.desciption
+                    }
                     staffList={movie.staffList}
                     image={
                         !movie.imageLink
